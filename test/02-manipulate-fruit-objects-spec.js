@@ -12,12 +12,12 @@ const fruits = require('../fruit-data');
 
 describe('addKeyAndValueToAll()', function () {
 
-    let fruitCopy1 =  [...fruits].map(i => ({ ...i}));
-    let fruitCopy1a =  [...fruits].map(i => ({ ...i}));
+    const fruitCopy1 = JSON.parse(JSON.stringify(fruits));
+    const fruitCopy1a = JSON.parse(JSON.stringify(fruits));
 
 
-    let updated1 = addKeyAndValueToAll(fruitCopy1, "inStock", true)
-    let updated1a = addKeyAndValueToAll(fruitCopy1a, "fresh", "always")
+    const updated1 = addKeyAndValueToAll(fruitCopy1, "inStock", true)
+    const updated1a = addKeyAndValueToAll(fruitCopy1a, "fresh", "always")
 
 
     it('returns an array of all fruit objects', function () {
@@ -42,12 +42,12 @@ describe('addKeyAndValueToAll()', function () {
 
 describe('addKeyAndValueToOne()', function () {
 
-    let fruitCopy2 =  [...fruits].map(i => ({ ...i}));
-    let fruitCopy2a =  [...fruits].map(i => ({ ...i}));
+    const fruitCopy2 =  JSON.parse(JSON.stringify(fruits));
+    const fruitCopy2a =  JSON.parse(JSON.stringify(fruits));
 
 
-    let updated2 = addKeyAndValueToOne(fruitCopy2, "color", "red", 1);
-    let updated2a = addKeyAndValueToOne(fruitCopy2, "price", 1, 12);
+    const updated2 = addKeyAndValueToOne(fruitCopy2, "color", "red", 1);
+    const updated2a = addKeyAndValueToOne(fruitCopy2, "price", 1, 12);
 
     it('returns a single object', function () {
         expect(updated2).to.be.an("object");
@@ -72,11 +72,8 @@ describe('addKeyAndValueToOne()', function () {
 
 describe('updateKeyName()', function () {
 
-    let fruitCopy3 =  [...fruits].map(i => ({ ...i}));
-    let updated3 = updateKeyName(fruitCopy3, "nutritions", "nutrition");
-
-    console.log(updated3[7])
-
+    const fruitCopy3 =  JSON.parse(JSON.stringify(fruits));
+    const updated3 = updateKeyName(fruitCopy3, "nutritions", "nutrition");
 
     it('returns an array of objects', function () {
         expect(updated3).to.be.an("array");
@@ -109,11 +106,11 @@ describe('updateKeyName()', function () {
 
 describe('updateIdValues()()', function () {
 
-    let fruitCopy4 =  [...fruits].map(i => ({ ...i}));
+    const fruitCopy4 =  JSON.parse(JSON.stringify(fruits));
 
-    let updated4 = updateIdValues(fruitCopy4);
+    const updated4 = updateIdValues(fruitCopy4);
 
-    let result4 = [ '000006', '000035', '000001', '000064', '000033',
+    const result4 = [ '000006', '000035', '000001', '000064', '000033',
     '000009', '000060', '000068', '000069','000047', '000072', '000037',
     '000066', '000026', '000044', '000065', '000067', '000027', '000041',
     '000002', '000042', '000070', '000004', '000052', '000010', '000071',
@@ -156,12 +153,12 @@ describe('updateIdValues()()', function () {
 
 describe('deleteKeysAndValues()', function () {
 
-    let fruitCopy5 =  [...fruits].map(i => ({ ...i}));
-    let fruitCopy5a =  [...fruits].map(i => ({ ...i}));
+    const fruitCopy5 =  JSON.parse(JSON.stringify(fruits));
+    const fruitCopy5a =  JSON.parse(JSON.stringify(fruits));
 
 
-    let updated5 = deleteKeysAndValues(fruitCopy5, "sugar");
-    let updated5a = deleteKeysAndValues(fruitCopy5a, "fat");
+    const updated5 = deleteKeysAndValues(fruitCopy5, "sugar");
+    const updated5a = deleteKeysAndValues(fruitCopy5a, "fat");
 
 
     it('return an array of fruit objects', function () {
