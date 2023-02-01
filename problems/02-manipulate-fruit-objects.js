@@ -15,7 +15,7 @@ function addKeyAndValueToAll(array, key, value) {
 /* 08. `addKeyAndValueToOne()` - Return object at the given index array, adding the given key and
 value to that fruit object
 
-console.log(addKeyAndValueToOne(fruits, "color", "red", 1));
+console.log(addKeyAndValueToOne(fruits, "color", "red", 0));
 // returns first object ("Apple"), including "color: red"
 */
 

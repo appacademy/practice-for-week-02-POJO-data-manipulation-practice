@@ -46,7 +46,7 @@ describe('addKeyAndValueToOne()', function () {
     const fruitCopy2a =  JSON.parse(JSON.stringify(fruits));
 
 
-    const updated2 = addKeyAndValueToOne(fruitCopy2, "color", "red", 1);
+    const updated2 = addKeyAndValueToOne(fruitCopy2, "color", "red", 0);
     const updated2a = addKeyAndValueToOne(fruitCopy2, "price", 1, 12);
 
     it('returns a single object', function () {
