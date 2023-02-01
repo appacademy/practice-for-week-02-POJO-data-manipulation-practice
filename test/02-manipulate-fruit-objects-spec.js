@@ -54,14 +54,14 @@ describe('addKeyAndValueToOne()', function () {
     });
 
     it('returns object at the correct index array', function () {
-        expect(updated2.id).to.deep.equal(35);
+        expect(updated2.id).to.deep.equal(6);
         expect(updated2a.id).to.deep.equal(66);
     });
 
     it('adds the given key and value to the correct fruit object', function () {
         expect(updated2).to.have.property('color');
         expect(updated2["color"]).to.deep.equal("red");
-        expect(fruitCopy2[0]).to.not.haveOwnProperty('color');
+        expect(fruitCopy2[1]).to.not.haveOwnProperty('color');
 
         expect(updated2a).to.have.property('price');
         expect(updated2a["price"]).to.deep.equal(1);
