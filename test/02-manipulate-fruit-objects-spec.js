@@ -46,11 +46,12 @@ describe('addKeyAndValueToOne()', function () {
     const fruitCopy2a =  JSON.parse(JSON.stringify(fruits));
 
 
-    const updated2 = addKeyAndValueToOne(fruitCopy2, "color", "red", 0);
-    const updated2a = addKeyAndValueToOne(fruitCopy2, "price", 1, 12);
+    const updated2 = addKeyAndValueToOne(fruitCopy2, "color", "red", 1);
+    const updated2a = addKeyAndValueToOne(fruitCopy2a, "price", 1, 12);
 
     it('returns a single object', function () {
         expect(updated2).to.be.an("object");
+        expect(updated2a).to.be.an("object");
     });
 
     it('returns object at the correct index array', function () {
