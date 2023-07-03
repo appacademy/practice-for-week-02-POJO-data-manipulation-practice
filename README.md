@@ -40,14 +40,14 @@ To get started, use the following commands:
 2. `cd` into the project directory
 3. `npm install` to install dependencies
 
-The `mocha` command will run all the tests. If you have any trouble with this
-don't hesitate to ask a TA for help! You should have `mocha` installed and will
-need to pass all the tests in order to move on.
+The `npm test` command will run all the tests. If you have any trouble with this
+don't hesitate to ask a TA for help!
 
-To test only one of the test files at a time, you can run the command, `mocha
-test/<test file name>` (e.g. `mocha test/01-fruit-data-structure-spec.js`),
-where `test` is the name of the test folder. You must run this command one
-directory above the `test` directory.
+To test only one of the test files at a time, you can run the command,
+`npm test test/<test file name>` (e.g.
+`npm test test/01-fruit-data-structure-spec.js`), where `test` is the name of
+the test folder. You must run this command one directory above the `test`
+directory.
 
 _You may notice the `package.json`/`package-lock.json` files and
 `node_modules` directory. You do not need to edit any of those contents. Those
@@ -62,8 +62,8 @@ help you understand the structure of the data within the `fruits` array.
 Complete each function in order, because you may be able to use some of your
 functions as helper functions in later problems.
 
-Run `mocha test/01-fruit-data-structure-spec.js` to run all the test specs for
-this phase. When all of the tests pass, you can move on to Phase 2.
+Run `npm test test/01-fruit-data-structure-spec.js` to run all the test specs
+for this phase. When all of the tests pass, you can move on to Phase 2.
 
 ## Phase 2: Manipulating Data within Objects
 
@@ -71,7 +71,7 @@ In this phase, you will practice manipulating the data within the data objects;
 adding keys and values, updating key names and values, and deleting key-value
 pairs.
 
-Run `mocha test/02-manipulate-fruit-objects-spec.js` to run all the test specs
-for this phase. There are multiple test specs for each problem. Run the tests
-often, as the error messages for the failed tests will help you to debug your
-code.
+Run `npm test test/02-manipulate-fruit-objects-spec.js` to run all the test
+specs for this phase. There are multiple test specs for each problem. Run the
+tests often, as the error messages for the failed tests will help you to debug
+your code.
